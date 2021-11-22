@@ -66,9 +66,11 @@ $(".start__button").click(function (e) {
             if ($(".main__start").hasClass("paused")) {
                 timer = setInterval(updateTimer, 1000);
                 $(".main__start").removeClass("paused");
+                $(".start__status").text("Stop");
             } else {
                 clearInterval(timer);
                 $(".main__start").addClass("paused");
+                $(".start__status").text("Resume");
             }
         });
         $(".main__start").fadeIn(400, function () {
@@ -81,7 +83,11 @@ $(".start__button").click(function (e) {
 });
 
 $(".main__start").hover(function () {
-    $(".start__status").text("Stop");
+    if ($(".main__start").hasClass("paused")) {
+        $(".start__status").text("Resume");
+    } else {
+        $(".start__status").text("Stop");
+    }
 }, function () {
     updateStatus();
 });
