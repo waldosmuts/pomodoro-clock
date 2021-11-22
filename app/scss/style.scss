@@ -21,9 +21,27 @@ header {
         font-size: 50px;
         font-weight: 800;
         text-transform: uppercase;
+        text-align: center;
         letter-spacing: 1.5rem;
         text-align: center;
         color: $-c-text-header;
+        margin-bottom: 25px;
+    }
+    h2 {
+        font-family: $-f-nunito;
+        font-weight: 800;
+        text-align: center;
+        color: $-c-text-purple;
+        text-transform: uppercase;
+        font-size: 25px;
+        letter-spacing: 0.5rem;
+        a {
+            color: $-c-text-highlight;
+            transition: color 0.4s;
+            &:hover {
+                color: $-c-text-white;
+            }
+        }
     }
 }
 
@@ -82,7 +100,6 @@ main {
                 font-weight: 800;
                 width: 50px;
                 height: 100px;
-                // margin: 10px 0;
                 padding: 10px 25px;
                 -moz-appearance: textfield;
                 &::-webkit-inner-spin-button {
@@ -179,25 +196,38 @@ main {
     }
 }
 
-footer {
-    position: absolute;
-    bottom: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-    span {
-        font-family: $-f-nunito;
-        font-weight: 800;
-        text-align: center;
-        color: $-c-text-purple;
-        text-transform: uppercase;
-        font-size: 14px;
-        letter-spacing: 0.2rem;
-        a {
-            color: $-c-text-highlight;
-            transition: color 0.4s;
-            &:hover {
-                color: $-c-text-white;
+@media screen and (max-width: 700px) {
+    header {
+        h1 {
+            font-size: 20px;
+            letter-spacing: 0;
+            margin-bottom: 5px;
+        }
+        h2 {
+            font-size: 14px;
+            letter-spacing: 0.2rem;
+        }
+    }
+
+    main {
+        top: 120px;
+        transform: translate(-50%, 0);
+        flex-direction: column;
+        .main__form {
+            flex-direction: column;
+            .form__section {
+                padding: 0;
+                width: 250px;
+                margin-bottom: 25px;
+                input {
+                    padding: 0;
+                    width: 250px;
+                }
             }
+        }
+        .main__start {
+            width: 250px;
+            height: 50px;
         }
     }
 }

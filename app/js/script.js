@@ -106,8 +106,6 @@ function updateTimer() {
         notify.play();
         currStatus += 1;
         currStatus > 1 ? currStatus = 0 : currStatus = currStatus;
-        console.log(currStatus);
-        console.log(currCycle);
         if (currCycle % 4 === 0) {
             if (currStatus === 0) {
                 timerMin = workTime;
