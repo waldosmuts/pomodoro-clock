@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Clock</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./app/css/style.css">
+</head>
+
+<body>
+    <header>
+        <a href=".">
+            <h1>Pomodoro Clock</h1>
+        </a>
+    </header>
+    <main>
+        <form class="main__form">
+            <div class="form__section">
+                <label for="work-input">Work</label>
+                <button id="work-add" class="button__add">+</button>
+                <input type="number" name="work" id="work-input" value="25" readonly>
+                <button id="work-sub" class="button__sub">-</button>
+            </div>
+            <div class="form__section">
+                <label for="rest-input">Rest</label>
+                <button id="rest-add" class="button__add">+</button>
+                <input type="number" name="rest" id="rest-input" value="5" readonly>
+                <button id="rest-sub" class="button__sub">-</button>
+            </div>
+            <div class="form__section">
+                <label for="break-input">Break</label>
+                <button id="break-add" class="button__add">+</button>
+                <input type="number" name="break" id="break-input" value="15" readonly>
+                <button id="break-sub" class="button__sub">-</button>
+            </div>
+        </form>
+        <div class="main__start">
+            <button class="start__button">Start</button>
+            <span class="start__status">Work</span>
+            <span class="start__timer">00:00</span>
+        </div>
+        <button class="main__skip">Skip</button>
+    </main>
+    <footer>
+        <span>Coded by <a href="https://github.com/waldosmuts">Waldo Smuts</a></span>
+    </footer>
+    <audio src="./audio/notify.wav"></audio>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./app/js/script.js"></script>
+</body>
+
+</html>
